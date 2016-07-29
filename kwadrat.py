@@ -7,3 +7,4 @@ for x,y in A:
     to_point(x,y)
 pen_down()
 sleep(10)
+#
