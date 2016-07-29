@@ -1,6 +1,5 @@
 # proba
 from turtle import Turtle
-import time
 
 
 def init_drawman():
@@ -39,5 +38,7 @@ def test_drawman():
     to_point(0,0)
 
 init_drawman()
+#if _name_=='_main_':
+import time
 test_drawman()
 time.sleep(10)
