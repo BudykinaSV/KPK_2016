@@ -32,10 +32,11 @@ def init_main_window():
     button2.bind('<Button>',print_hello)
     button2.pack()
 
-
-    label=Tkinter.Label(root,text='Some text')
-    text=Tkinter.Entry(root)
-    scale=Tkinter.Scale(root)
+    variable=Tkinter.IntVar(0)
+    label=Tkinter.Label(root,textvariable=variable)
+    text=Tkinter.Entry(root, textvariable=variable)
+    scale=Tkinter.Scale(root,orient=Tkinter.HORIZONTAL, length=300,
+        from_=0, to=100, tickinterval=10, resolution=5, variable=variable)
     for obj in label,text,scale:
         obj.pack()
 
