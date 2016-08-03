@@ -11,12 +11,13 @@ def paint(event):
 
 root=Tkinter.Tk()
 
-canvas=Tkinter.Canvas(root)
+canvas=Tkinter.Canvas(root, background='green',width=400,height=400)
 canvas.bind("<Motion>", paint)
 canvas.pack()
 
 line=canvas.create_line(0,0,10,10)
-
+for i in range(1,8,1):
+    oval=canvas.create_oval(i*40,i*40,i*40+20,i*40+20,fill='white',width=2,)
 
 root.mainloop()
 print("Приложение завершило работу")
