@@ -1,4 +1,6 @@
-import Tkinter
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+import Tkinter #подключение библиотеки
 
 def button1_command():
     print('Enter tuknut')
