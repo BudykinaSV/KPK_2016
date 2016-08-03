@@ -22,6 +22,14 @@ def click_ball(event):
         canvas.delete(obj)
         create_random_ball()
 
+def move_all_balls(event):
+    """перемещение всех шариков на чуть-чуть"""
+    for obj in canvas.find_all():
+        dx=randint(-1,1)
+        dy=randint(-1,1)
+        canvas.move(obj,dx,dy)
+
+
 def create_random_ball():
     """создание шарика с случайным размещением
     шарик не выходит за границы холста
@@ -52,6 +60,7 @@ def init_main_window():
 
     canvas=Tkinter.Canvas(root, background='green',width=400,height=400)
     canvas.bind("<Button>", click_ball)
+    canvas.bind("<Motion>", move_all_balls)
     canvas.pack()
 
 
