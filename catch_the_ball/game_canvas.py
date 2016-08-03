@@ -17,7 +17,7 @@ canvas.pack()
 
 line=canvas.create_line(0,0,10,10)
 for i in range(1,8,1):
-    oval=canvas.create_oval(i*40,i*40,i*40+20,i*40+20,fill='white',width=2,)
+    oval=canvas.create_oval(i*40,i*40,i*40+20,i*40+20,fill='white',width=2, outline="red")
 
 root.mainloop()
 print("Приложение завершило работу")
