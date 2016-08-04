@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 from turtle import Turtle
+default_scale=10 #масштаб по умолчанию
 
 def init_drawman():
     global x_current, y_current, t, _drawman_scale
@@ -9,7 +10,7 @@ def init_drawman():
     x_current=0
     y_current=0
     t.goto(x_current,y_current)
-    _drawman_scale=10
+    drawman_scale(default_scale) # функция задает масштаб по умолчанию
 
 def drawman_scale(scale):
     global _drawman_scale
