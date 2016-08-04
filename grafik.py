@@ -6,7 +6,7 @@ from time import sleep
 def f(x):
     return x**2
 
-drawman_scale(10)
+drawman_scale(5)
 """обращение к функции модуля proba.ry
    с параметром масштаба"""
 pen_up()
