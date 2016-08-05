@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-import Tkinter
+import tkinter
 from random import choice, randint
 from math import cos, sin, pi
 import time
@@ -56,9 +56,9 @@ def init_ball_catch_game():
 def init_main_window():
     global root, canvas
 
-    root=Tkinter.Tk()
+    root=tkinter.Tk()
 
-    canvas=Tkinter.Canvas(root, background='green',width=400,height=400)
+    canvas=tkinter.Canvas(root, background='green',width=400,height=400)
     canvas.bind("<Button>", click_ball)
     canvas.bind("<Motion>", move_all_balls)
     canvas.pack()

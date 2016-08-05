@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-import Tkinter #подключение библиотеки
+import tkinter #подключение библиотеки
 
 def button1_command():
     print('Enter tuknut')
@@ -26,18 +26,18 @@ def print_hello(event):
 
 def init_main_window():
     global root, button1, button2, label, text, scale
-    root=Tkinter.Tk()
-    button1=Tkinter.Button(root,text='Button1',command=button1_command)
+    root=tkinter.Tk()
+    button1=tkinter.Button(root,text='Button1',command=button1_command)
     button1.bind('<Button>',print_hello)
     button1.pack()
-    button2=Tkinter.Button(root,text='Button2')
+    button2=tkinter.Button(root,text='Button2')
     button2.bind('<Button>',print_hello)
     button2.pack()
 
-    variable=Tkinter.IntVar(0)
-    label=Tkinter.Label(root,textvariable=variable)
-    text=Tkinter.Entry(root, textvariable=variable)
-    scale=Tkinter.Scale(root,orient=Tkinter.HORIZONTAL, length=300,
+    variable=tkinter.IntVar(0)
+    label=tkinter.Label(root,textvariable=variable)
+    text=tkinter.Entry(root, textvariable=variable)
+    scale=tkinter.Scale(root,orient=tkinter.HORIZONTAL, length=300,
         from_=0, to=100, tickinterval=10, resolution=5, variable=variable)
     for obj in label,text,scale:
         obj.pack()

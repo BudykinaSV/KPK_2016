@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-import Tkinter
+import tkinter
 
 def paint(event):
     print(event.x, event.y)
@@ -9,9 +9,9 @@ def paint(event):
         return
     canvas.coords(line,0,0,event.x, event.y)
 
-root=Tkinter.Tk()
+root=tkinter.Tk()
 
-canvas=Tkinter.Canvas(root, background='green',width=400,height=400)
+canvas=tkinter.Canvas(root, background='green',width=400,height=400)
 canvas.bind("<Motion>", paint)
 canvas.pack()
 
