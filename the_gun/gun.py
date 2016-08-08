@@ -48,7 +48,6 @@ def f():
     print('Hello')
     canvas.after(2000,f)#каждые 2сек пишем hello
 
-
 if __name__ == "__main__":
     init_main_window()
     init_game()
