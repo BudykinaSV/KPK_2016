@@ -44,10 +44,13 @@ def init_main_window():
     canvas.grid(row=1, column=0, columnspan=3)
     scores_text.grid(row=0,column=2)
 
-
+def f():
+    print('Hello')
+    canvas.after(2000,f)#каждые 2сек пишем hello
 
 
 if __name__ == "__main__":
     init_main_window()
     init_game()
+    f()
     root.mainloop()
