@@ -48,7 +48,7 @@ class Ball:
 
 
 class Gun:
-    """КЛАСС пука"""
+    """КЛАСС пушка"""
     def __init__(self):
         self._x = 2
         self._y = screen_height-1
