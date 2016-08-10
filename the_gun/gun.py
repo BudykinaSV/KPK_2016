@@ -2,7 +2,7 @@ from tkinter import *
 from random import choice, randint
 
 screen_width=400
-screen_height=400
+screen_height=300
 timer_delay=100
 
 class Ball:
@@ -49,21 +49,34 @@ class Ball:
 
 
 class Gun:
+    """КЛАСС пука"""
     def __init__(self):
-        self._x = 0
+        self._x = 2
         self._y = screen_height-1
         self._lx = +30
         self._ly = -30
         self._avatar = canvas.create_line(self._x, self._y,
-                                          self._x+self._lx,
-                                          self._y+self._ly)
+                        self._x+self._lx, self._y+self._ly)
+
+        self._avatar = canvas.create_line(self._x+10, self._y,
+                        self._x+self._lx+10, self._y+self._ly)
+
+        self._avatar = canvas.create_line(self._x, self._y,
+                        self._x+10, self._y)
+        self._avatar = canvas.create_line(self._x+self._lx, self._y+self._ly,
+                        self._x+self._lx+10, self._y+self._ly)
 
     def shoot(self):
         """
-        :return возвращает объект снаряда (класса Shell)
+        метод СНАРЯД, возвращает объект снаряда (класса Ball)
         """
-        shell = Shell(self._x + self._lx, self._y + self._ly,
-                      self._lx/10, self._ly/10)
+        shell= Ball()
+        shell._x=self._x+self._lx-3
+        shell._y=self._y+self._ly-6
+        shell._Vx=self._lx/10
+        shell._Vy=self._ly/10
+        shell._R=5
+        shell.fly()
         return shell
 
 
