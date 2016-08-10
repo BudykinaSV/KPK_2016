@@ -58,7 +58,6 @@ def sort_wybor(A): #сортировка выбором
                 min=i
         A[pos],A[min]=A[min],A[pos]
 
-
 if __name__=='__main__':
     sort_test(sort_puzyrek)
     print("\n")
