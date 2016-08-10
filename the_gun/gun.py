@@ -47,7 +47,6 @@ class Ball:
                       self._x+2*self._R,self._y+2*self._R)
 
 
-
 class Gun:
     """КЛАСС пука"""
     def __init__(self):
@@ -81,9 +80,7 @@ class Gun:
 
 
 def init_game():
-    """
-    создание шариков и пушки
-    """
+    """создание шариков и пушки """
     global balls, gun, shells_on_fly
     balls=[Ball() for i in range(Ball.initial_number)]
     gun = Gun() #создать экземпляр пушки
