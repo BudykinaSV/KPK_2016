@@ -58,8 +58,22 @@ def sort_wybor(A): #сортировка выбором
                 min=i
         A[pos],A[min]=A[min],A[pos]
 
-if __name__=='__main__':
-    sort_test(sort_puzyrek)
-    print("\n")
-    sort_test(sort_wybor)
 
+def sort_vstavka(A): #сортировка вставками
+    N=len(A)
+    for pos in range (1,N):
+        i=0
+        while A[i]<A[pos]:
+            i+=1
+        x=A[pos]
+        for k in range(pos-1,i-1,-1):
+            A[k+1]=A[k]
+        A[i]=x
+
+if __name__=='__main__':
+    print("Сортировка пузырьком")
+    sort_test(sort_puzyrek)
+    print("\nСортировка выбором")
+    sort_test(sort_wybor)
+    print("\nСортировка вставками")
+    sort_test(sort_vstavka)
